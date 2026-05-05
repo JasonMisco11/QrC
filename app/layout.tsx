@@ -12,11 +12,11 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "CarePulse",
+  title: "K Home Services",
   description:
-    "A healthcare patient management System designed to streamline patient registration, appointment scheduling, and medical records management for healthcare providers.",
+    "A home services platform designed to streamline service requests, provider scheduling, and customer communication.",
   icons: {
-    icon: "/assets/icons/logo-icon.svg",
+    icon: "/handy.jpg",
   },
 };
 
