@@ -104,8 +104,10 @@ const RegisterForm = ({ user }: { user: User }) => {
         className="flex-1 space-y-12"
       >
         <section className="space-y-4">
-          <h1 className="header">Welcome 👋</h1>
-          <p className="text-dark-700">Let us know more about yourself.</p>
+          <h1 className="header text-center md:text-left">Welcome </h1>
+          <p className="text-dark-700 text-center md:text-left">
+            Let us know more about yourself.
+          </p>
         </section>
 
         <section className="space-y-6">
@@ -189,18 +191,18 @@ const RegisterForm = ({ user }: { user: User }) => {
               label="Address"
               placeholder="14 street, New york, NY - 5101"
             />
-
+            {/* 
             <CustomFormField
               fieldType={FormFieldType.INPUT}
               control={form.control}
               name="occupation"
               label="Occupation"
               placeholder=" Software Engineer"
-            />
+            /> */}
           </div>
 
           {/* Emergency Contact Name & Emergency Contact Number */}
-          <div className="flex flex-col gap-6 xl:flex-row">
+          {/* <div className="flex flex-col gap-6 xl:flex-row">
             <CustomFormField
               fieldType={FormFieldType.INPUT}
               control={form.control}
@@ -222,10 +224,10 @@ const RegisterForm = ({ user }: { user: User }) => {
         <section className="space-y-6">
           <div className="mb-9 space-y-1">
             <h2 className="sub-header">Medical Information</h2>
-          </div>
+          </div> */}
 
           {/* PRIMARY CARE PHYSICIAN */}
-          <CustomFormField
+          {/* <CustomFormField
             fieldType={FormFieldType.SELECT}
             control={form.control}
             name="primaryPhysician"
@@ -246,10 +248,10 @@ const RegisterForm = ({ user }: { user: User }) => {
                 </div>
               </SelectItem>
             ))}
-          </CustomFormField>
+          </CustomFormField> */}
 
           {/* INSURANCE & POLICY NUMBER */}
-          <div className="flex flex-col gap-6 xl:flex-row">
+          {/* <div className="flex flex-col gap-6 xl:flex-row">
             <CustomFormField
               fieldType={FormFieldType.INPUT}
               control={form.control}
@@ -265,10 +267,10 @@ const RegisterForm = ({ user }: { user: User }) => {
               label="Insurance policy number"
               placeholder="ABC123456789"
             />
-          </div>
+          </div> */}
 
           {/* ALLERGY & CURRENT MEDICATIONS */}
-          <div className="flex flex-col gap-6 xl:flex-row">
+          {/* <div className="flex flex-col gap-6 xl:flex-row">
             <CustomFormField
               fieldType={FormFieldType.TEXTAREA}
               control={form.control}
@@ -284,10 +286,10 @@ const RegisterForm = ({ user }: { user: User }) => {
               label="Current medications"
               placeholder="Ibuprofen 200mg, Levothyroxine 50mcg"
             />
-          </div>
+          </div> */}
 
           {/* FAMILY MEDICATION & PAST MEDICATIONS */}
-          <div className="flex flex-col gap-6 xl:flex-row">
+          {/* <div className="flex flex-col gap-6 xl:flex-row">
             <CustomFormField
               fieldType={FormFieldType.TEXTAREA}
               control={form.control}
@@ -303,7 +305,7 @@ const RegisterForm = ({ user }: { user: User }) => {
               label="Past medical history"
               placeholder="Appendectomy in 2015, Asthma diagnosis in childhood"
             />
-          </div>
+          </div> */}
         </section>
 
         <section className="space-y-6">
