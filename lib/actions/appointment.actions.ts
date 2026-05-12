@@ -164,3 +164,20 @@ export const getAppointment = async (appointmentId: string) => {
     );
   }
 };
+
+// DELETE APPOINTMENT
+export const deleteAppointment = async (appointmentId: string) => {
+  try {
+    await databases.deleteDocument(
+      DATABASE_ID!,
+      APPOINTMENT_COLLECTION_ID!,
+      appointmentId
+    );
+
+    revalidatePath("/admin");
+    return { success: true };
+  } catch (error) {
+    console.error("An error occurred while deleting the appointment:", error);
+    return { success: false };
+  }
+};

@@ -85,7 +85,12 @@ export const UserForm = () => {
           placeholder="+233 55 123 4567"
         />
 
-        <SubmitButton isLoading={isLoading}>Get Started Now</SubmitButton>
+        <SubmitButton
+          className="w-full shad-primary-btn hover:scale-95 cursor-pointer"
+          isLoading={isLoading}
+        >
+          Let's Get Started
+        </SubmitButton>
       </form>
     </Form>
   );

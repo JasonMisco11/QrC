@@ -11,7 +11,6 @@ const Home = ({ searchParams }: SearchParamProps) => {
     <div className="landing-page">
       {isAdmin && <PasskeyModal />}
 
-      {/* ===== NAVBAR ===== */}
       <nav className="landing-nav">
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -40,22 +39,21 @@ const Home = ({ searchParams }: SearchParamProps) => {
           >
             Admin
           </Link>
-          <Link href="/sign-in" className="landing-btn-outline">
-            Sign In
-          </Link>
-          <Link href="/sign-up" className="landing-btn-primary">
-            Sign Up
+          <Link
+            href="/sign-in"
+            className="landing-btn-outline hover:scale-95 transition-all duration-200"
+          >
+            Join the platform
           </Link>
         </div>
       </nav>
 
-      {/* ===== HERO SECTION ===== */}
       <section className="landing-hero">
         <div className="landing-hero-content">
           <h1 className="landing-hero-title">
             Your Home,
             <br />
-            <span className="text-green-500">Our Priority.</span>
+            <h1 className="text-24-bold text-green-500">Our Priority.</h1>
           </h1>
           <p className="landing-hero-description">
             Professional home services at your fingertips. From plumbing to
@@ -106,11 +104,9 @@ const Home = ({ searchParams }: SearchParamProps) => {
         </div>
       </section>
 
-      {/* ===== SERVICES SECTION ===== */}
       <section id="services" className="landing-section">
         <div className="landing-section-header">
-          <span className="landing-section-tag">What We Offer</span>
-          <h2 className="landing-section-title">Our Services</h2>
+          <h1 className="text-24-bold text-green-500">What We Offer</h1>
           <p className="landing-section-description">
             From routine maintenance to specialized repairs, our certified
             professionals handle everything your home needs.
@@ -161,11 +157,9 @@ const Home = ({ searchParams }: SearchParamProps) => {
         </div>
       </section>
 
-      {/* ===== HOW IT WORKS ===== */}
       <section className="landing-section landing-section-alt">
         <div className="landing-section-header">
-          <span className="landing-section-tag">Simple Process</span>
-          <h2 className="landing-section-title">How It Works</h2>
+          <h1 className="text-24-bold text-green-500">Simple Process</h1>
           <p className="landing-section-description">
             Getting started with K Home Services is easy — just three simple
             steps.
@@ -201,7 +195,6 @@ const Home = ({ searchParams }: SearchParamProps) => {
         </div>
       </section>
 
-      {/* ===== ABOUT SECTION ===== */}
       <section id="about" className="landing-section">
         <div className="landing-about">
           <div className="landing-about-image">
@@ -214,10 +207,7 @@ const Home = ({ searchParams }: SearchParamProps) => {
             />
           </div>
           <div className="landing-about-content">
-            <span className="landing-section-tag">Who We Are</span>
-            <h2 className="landing-section-title text-left">
-              Trusted Home Service Professionals
-            </h2>
+            <h1 className="text-24-bold text-green-500">Who We Are</h1>
             <p className="text-16-regular text-dark-700">
               K Home Services connects homeowners with skilled, vetted
               professionals for every home need. We believe everyone deserves a
@@ -287,7 +277,6 @@ const Home = ({ searchParams }: SearchParamProps) => {
         </div>
       </section>
 
-      {/* ===== CTA SECTION ===== */}
       <section className="landing-cta">
         <div className="landing-cta-glow" />
         <h2 className="landing-cta-title">Ready to Transform Your Home?</h2>
@@ -305,7 +294,6 @@ const Home = ({ searchParams }: SearchParamProps) => {
         </div>
       </section>
 
-      {/* ===== FOOTER ===== */}
       <footer id="contact" className="landing-footer">
         <div className="landing-footer-top">
           <div className="landing-footer-brand">
@@ -381,12 +369,6 @@ const Home = ({ searchParams }: SearchParamProps) => {
           <p className="text-14-regular text-dark-600">
             © 2026 K Home Services. All rights reserved.
           </p>
-          <Link
-            href="/?admin=true"
-            className="text-14-regular text-dark-600 hover:text-green-500 transition-colors"
-          >
-            Admin Access
-          </Link>
         </div>
       </footer>
     </div>
