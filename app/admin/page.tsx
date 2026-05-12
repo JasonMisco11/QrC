@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { AdminGuard } from "@/components/AdminGuard";
 import { StatCard } from "@/components/StatCard";
 import { columns } from "@/components/table/columns";
 import { DataTable } from "@/components/table/DataTable";
@@ -24,6 +25,9 @@ const AdminPage = async () => {
 
         <p className="text-16-semibold">Admin Dashboard</p>
       </header>
+
+      {/* Client-side auth gate — shows passkey modal if not authenticated */}
+      <AdminGuard />
 
       <main className="admin-main">
         <section className="w-full space-y-4">
