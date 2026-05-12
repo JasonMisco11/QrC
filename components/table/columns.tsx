@@ -8,6 +8,7 @@ import { formatDateTime } from "@/lib/utils";
 import { Appointment } from "@/types/appwrite.types";
 
 import { AppointmentModal } from "../AppointmentModal";
+import { DeleteAppointmentButton } from "../DeleteAppointmentButton";
 import { StatusBadge } from "../StatusBadge";
 
 export const columns: ColumnDef<Appointment>[] = [
@@ -84,7 +85,7 @@ export const columns: ColumnDef<Appointment>[] = [
       const appointment = row.original;
 
       return (
-        <div className="flex gap-1">
+        <div className="flex items-center gap-1">
           <AppointmentModal
             registeredUserId={appointment.user}
             userId={appointment.userId}
@@ -101,6 +102,9 @@ export const columns: ColumnDef<Appointment>[] = [
             title="Cancel Appointment"
             description="Are you sure you want to cancel your appointment?"
           />
+          {appointment.status === "cancelled" && (
+            <DeleteAppointmentButton appointmentId={appointment.$id} />
+          )}
         </div>
       );
     },
